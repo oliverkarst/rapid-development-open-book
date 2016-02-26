@@ -4,6 +4,7 @@ v0.1, Jun 25, 2014
 :doctype: book
 :toc:
 :toclevels: 3
+:title-logo-image: rabbit-logo.jpg
 
 include::chapters/introduction.adoc[]
 
