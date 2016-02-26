@@ -1,0 +1,16 @@
+:imagesdir: ../images
+:experimental:
+
+== Rapid Testing and Quality Verification
+
+=== JUnit
+
+=== Arquillian
+
+http://arquillian.org[http://arquillian.org]
+Write real tests.
+So you can rule your code. Not the bugs.
+
+=== Sonarqube
+
+http://www.sonarqube.org[http://www.sonarqube.org]

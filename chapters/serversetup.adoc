@@ -1,0 +1,28 @@
+:imagesdir: ../images
+:experimental:
+
+== Rapid Server Setup
+
+How to setup fast a Server for the things I want to run and test?
+
+Again here are different possibilites.
+
+=== Using AWS AMI Images
+
+=== Docker and already configured Containers
+
+==== JBoss
+http://blog.arungupta.me/9-docker-recipes-javaee-applications-techtip80/[http://blog.arungupta.me/9-docker-recipes-javaee-applications-techtip80/]
+
+==== Wildfly
+https://github.com/jboss-dockerfiles/wildfly[https://github.com/jboss-dockerfiles/wildfly]
+
+==== Jenkins
+
+==== Mysql
+
+==== Couchbase
+
+https://github.com/arun-gupta/couchbase-javaee[https://github.com/arun-gupta/couchbase-javaee]
+
+==== Labs for using Java EE and Docker

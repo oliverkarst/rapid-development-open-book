@@ -1,0 +1,39 @@
+:imagesdir: ../images
+:experimental:
+
+== Web Service APIs
+
+There's a bunch of Web Service APISs that you can use for your development projects.
+This APIs provide mainly information. Secondary verification possibilities, e.g. telephone number, etc.
+
+One of the most famous Web Service APIs is provided by google with:
+https://developers.google.com/places/web-service/[https://developers.google.com/places/web-service/]
+
+As example we have here mainly the use of google maps. Here some examples for JavaScript:
+https://developers.google.com/maps/documentation/javascript/examples/[https://developers.google.com/maps/documentation/javascript/examples/]
+
+https://docs.wso2.com/display/AM180/Quick+Start+Guide
+
+https://www.google.de/search?q=open+data+api+list&oq=open+data+api&aqs=chrome.1.69i57j0l5.4015j0j7&sourceid=chrome&es_sm=122&ie=UTF-8
+
+http://data.deutschebahn.com/apis/fahrplan/
+https://developer.lufthansa.com/docs/read/Home
+
+dropbox sdk
+https://www.wikiwand.com/en/List_of_open_APIs
+http://developer.nytimes.com/
+
+https://developers.google.com/maps/documentation/javascript/examples/
+https://developers.google.com/places/web-service/
+https://developers.google.com/products/?csw=1
+
+https://www.data.gov/developers/apis
+http://ckan.org/developers/about-ckan/
+
+http://openweathermap.org/api
+
+https://github.com/ihcsim/docker-wso2apim
+http://thilina.piyasundara.org/2014/05/run-wso2-products-in-docker-container.html
+
+
+

@@ -1,0 +1,99 @@
+:imagesdir: ../images
+:experimental:
+
+== Rapid Code Generation
+
+=== Meteor
+https://www.meteor.com[https://www.meteor.com]
+
+Meteor is a platform for building fast JavaScript based applications.
+
+=== Forge
+http://forge.jboss.org[http://forge.jboss.org]
+
+Forge is a tool that helps to build maven based Java EE projects fast from the scratch.
+
+=== Maven Archetypes
+
+http://maven.apache.org/archetype/maven-archetype-plugin/specification/archetype-catalog.html[http://maven.apache.org/archetype/maven-archetype-plugin/specification/archetype-catalog.html]
+Maven provides the possibility to generate a new project based on an archetype. 
+
+==== Examples of Maven Archetypes
+
+Adam Bien REST Examples
+netbeans Webapp Example
+JBoss WebApp Example
+
+To create a simple java web application, we'll use maven-archetype-webapp plugin. So let's open command console, go the C:\MVN directory and execute the following **mvn** command.
+
+[source,java]
+----
+C:\MVN>mvn archetype:generate 
+-DgroupId=com.companyname.automobile 
+-DartifactId=trucks
+-DarchetypeArtifactId=maven-archetype-webapp 
+-DinteractiveMode=false
+----
+Maven will start processing and will create the complete web based java application project structure.
+
+Other Archetypes:
+- Microservices from wso2.com (API-management Manager example of the Java framework)
+https://github.com/wso2/msf4j[https://github.com/wso2/msf4j]
+[source,java]
+----
+man archetype:generat*e -DarchetypeGroupId=org.wso2.msf4j \
+-DarchetypeArtifactId=msf4j-microservice -DarchetypeVersion=1.0.0 \
+-DgroupId=org.example -DartifactId=Hello-Service -Dversion=1.0.0-SNAPSHOT \
+-Dpackage=org.example.service -DserviceClass=HelloService
+----
+
+==== Maven Archetype Catalog
+The point of catalogs is exactly to not have to know the names of archetypes in advance. They are made to publish archetypes and allow `mvn archetype:generate` to list archetypes. So it makes sense to add "external" catalogs (understand not in the internal) to get a wider list of known archetypes when using `mvn archetype:generate`.
+
+For archetypes without a catalog, users have to type an horrible command that must be documented somewhere (because it requires knowledge of the artifact).
+
+Regarding my propositions:
+
+Atlassian's archetypes are in the internal catalog. Not a good proposition.
+
+Grails archetypes aren't in the internal catalog or in a published archetype-catalog.xml. Not a good proposition.
+
+ServiceMix has catalogs here http://servicemix.apache.org/tooling/ (based on a http://servicemix.apache.org/tooling/<version>/archetype-catalog.xml pattern). Valid proposition.
+
+One fun thing I learned while digging this. The maven guys provides a nice tool that helps people developing archetypes to create a catalog XML: the archetype:crawl goal basically crawls a local Maven repository searching for Archetypes and generates/include::batch.adoc[]updates a archetype-catalog.xml file in ~/.m2/repository by default. Projects, people just have to run periodically something like:
+
+[source, java]
+mvn archetype:crawl -Dcatalog=/var/www/html/archetype-catalog.xml
+
+Grails doesn't provide a catalog. To create a project, we have to run:
+
+[source, java]
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.0-alpha-4:generate -DarchetypeGroupId=org.grails \
+-DarchetypeArtifactId=grails-maven-archetype \
+-DarchetypeVersion=1.0 \
+-DarchetypeRepository=http://snapshots.repository.codehaus.org \
+-DgroupId=example -DartifactId=my-app
+
+But once we did this, we have the archetype in our local repository. So if we type:
+
+[source, java]
+mvn archetype:crawl -Dcatalog=/home/<me>/.m2/archetype-catalog.xml
+
+The archetype get listed in ~/.m2/archetype-catalog.xml and we can now use the mvn archetype:generate for Grails too (see option 5):
+
+[source, java]
+mvn archetype:generate
+...
+[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+1: local -> maven-archetype-archetype (archetype)
+2: local -> maven-archetype-j2ee-simple (j2ee)
+3: local -> maven-archetype-quickstart (quickstart)
+4: local -> maven-archetype-webapp (webapp)
+5: local -> grails-maven-archetype (maven-project)
+6: internal -> appfuse-basic-jsf (AppFuse archetype for creating a web application with Hibernate, Spring and JSF)
+...
+
+This is of course a (hugly) workaround and it might have side effects (you won't see new versions of archetypes). Actually, I don't think the archetype:crawl goal is intended for this use. I would like all projects them to publish their archetypes.
+
+

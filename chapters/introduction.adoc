@@ -1,0 +1,41 @@
+:imagesdir: ../images
+
+== Introduction
+
+Today time to market is essentiel. This is especially important for 
+Software Development. The first who provides a product can earn the biggest cake of 
+the market. So which possibilities are available to develop high quality software fast?
+
+== Purpose of this document
+
+The aim is to provide with this document an overview of possibilities and products.
+While writing this document a research is done and the findings are documented here.
+
+Please feel free to participate!!
+
+For merging purposes the format of this document is adoc.  To compile this document 
+in a nicer format you can download and use asciidoctor (html generation) and asciidoctor-pdf
+(guess what for ;-)  pdf generation).
+There are several editors available supporting asciidoc, I prefer 
+AsciidocFX http://asciidocfx.com[http://asciidocfx.com] 
+
+This document wants to give an overview an existing (open source) posibilities, as there is
+
+* Rapid Code Generation
+** Maven with archetypes
+** Meteor
+** Forge
+* Rapid Environment Setup
+** Docker
+** AWS
+* Rapid Documentation
+** javadoc
+** mvn site
+* Rapid Testing and Quality Checks
+* Rapid Deployment and Delivery (CI + CD)
+** fabric8.io
+** Jenkins
+* Rapid Frameworks
+** JS Framework (Angular, JS, etc.) 
+** JEE
+

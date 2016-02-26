@@ -1,0 +1,46 @@
+:imagesdir: ../images
+:experimental:
+
+== Rapid Setup Of Development Environment
+
+=== Vagrant
+
+=== Ubuntu Make
+
+https://wiki.ubuntu.com/ubuntu-make[https://wiki.ubuntu.com/ubuntu-make]
+https://github.com/ubuntu/ubuntu-make/blob/master/README.md[https://github.com/ubuntu/ubuntu-make/blob/master/README.md]
+
+Installing Ubuntu Make
+
+If you are on latest development Ubuntu version, first, add the Ubuntu Make ppa:
+
+[source}
+ $ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+ $ sudo apt-get update
+
+Then, installing Ubuntu Make:
+[source]
+ $ sudo apt-get install ubuntu-make
+
+How to install android-studio
+
+[source]
+ $ umake android
+
+
+For easy setup of:
+
+|===
+| pycharm-educational | PyCharm Educational Edition
+| arduino | The Arduino Software Distribution
+| eclipse | Pure Eclipse Luna (4.4)
+| android-studio | Anroid Studio (default)
+| webstorm | WebStorm
+| pycharm-professional | PyCharm Professional Edition
+| idea-ultimate | IntelliJ IDEA
+| rubymine | Ruby on Rails IDE
+| idea | IntelliJ IDEA Community Edition
+| pycharm | PyCharm Community Edition
+| phpstorm | PhpStorm
+|===
+
