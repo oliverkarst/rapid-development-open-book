@@ -1,6 +1,6 @@
 = Rapid Development - An Overview
 Oliver Karst <https://twitter.com/blaujokar[@blaujokar]>
-v0.1, Jun 25, 2014
+v0.1, Feb 27, 2016
 :doctype: book
 :toc:
 :toclevels: 3
